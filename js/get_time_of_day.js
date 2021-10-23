@@ -16,4 +16,5 @@ function getTimeOfDay() {
       return "day";
   }
 }
+
 export default getTimeOfDay;
