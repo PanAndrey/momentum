@@ -1,12 +1,3 @@
-import showTime from "./show_time_date.js";
-
-function showGreeting() {
-  const timeOfDay = getTimeOfDay();
-  const greetingText = `Good ${timeOfDay}`;
-  document.querySelector(".greeting").textContent = greetingText;
-
-  showTime();
-}
 function getTimeOfDay() {
   const time = ["morning", "afternoon", "evening", "night"];
   const hours = new Date().getHours();
@@ -25,4 +16,4 @@ function getTimeOfDay() {
       return "day";
   }
 }
-export default showGreeting;
+export default getTimeOfDay;
