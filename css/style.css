@@ -64,7 +64,9 @@ body {
   top: 2px;
   font-weight: 900;
 }
-
+.play-item.active {
+  text-decoration: underline;
+}
 .item-active::before {
   color: #c5b358;
 }
