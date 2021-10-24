@@ -12,11 +12,20 @@ showTime();
 showGreeting();
 getName();
 changeBg();
-getWeather(
-  `https://api.openweathermap.org/data/2.5/weather?q=Minsk&lang=en&appid=05246233012e4a7ff64e9504f527a4a0&units=metric`
-);
+
 shouAudio();
 getQuotes();
 
 const quoteBtn = document.querySelector(".change-quote");
 quoteBtn.addEventListener("click", getQuotes);
+
+let city = document.querySelector(".city");
+if (!localStorage.getItem("userCity")) {
+  city.value = "Minsk";
+} else {
+  city.value = localStorage.getItem("userCity");
+}
+
+getWeather(
+  `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&lang=en&appid=05246233012e4a7ff64e9504f527a4a0&units=metric`
+);
