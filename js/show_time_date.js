@@ -3,11 +3,9 @@
 function showDate() {
   const date = document.querySelector(".date");
   const options = {
+    weekday: "long",
     month: "long",
     day: "numeric",
-    hour: "numeric",
-    minute: "numeric",
-    timeZone: "UTC",
   };
   const currentDate = new Date().toLocaleDateString("en-En", options);
   date.textContent = currentDate;
